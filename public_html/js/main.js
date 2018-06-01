@@ -16,7 +16,7 @@ function getTotal(list){
 function setList(list){
     var table = '<thead><tr><td>Nome</td><td>Quantidade</td><td>Valor</td><td>Opções</td></tr></thead><tbody>';
     for(var key in list){
-        table += '<tr><td>'+ formatDesc(list[key].nome) +'</td><td>'+ formatAmount(list[key].quantidade) +'</td><td>'+ formatValue(list[key].valor) +'</td><td><button class="btn btn-default" onclick="setUpdate('+key+');" >Editar</button>  <button class="btn btn-default" onclick="deleteData('+key+');" >Deletar</button></td></tr>';
+        table += '<tr><td>'+ formatDesc(list[key].nome) +'</td><td>'+ formatAmount(list[key].quantidade) +'</td><td>'+ formatValue(list[key].valor) +'</td><td><button class="btn btn-warning" onclick="setUpdate('+key+');" >Editar</button>  <button class="btn btn-danger" onclick="deleteData('+key+');" >Deletar</button></td></tr>';
     }
     table += '</tbody>';
     document.getElementById("listTable").innerHTML = table;
